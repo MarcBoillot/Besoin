@@ -1,10 +1,12 @@
 <?php
+//ceci est mon front controller
 session_start();
 include 'config/database.php';
+
 $action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
-$action = empty($action) ? $action : 'home'; //si empty action alors action = home
+$action = !empty($action) ? $action : 'home'; //si empty action alors action = home
 $route =[
-    'home' => 'home.php',
+    'home' => 'app/controllers/homeController.php',
     'contact' => 'contact.php',
     'about' => 'about.php',
     ];
