@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'config/database.php';
 $action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
 $action = empty($action) ? $action : 'home'; //si empty action alors action = home
 $route =[
@@ -14,6 +15,8 @@ $route =[
         include ('404.php');
     }else{
         $page = $route [$action];
-        include = $page;
+        include  $page;
     }
+
+   
 ?>
