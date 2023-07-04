@@ -1,4 +1,4 @@
 <?php
-//controller qui va recuperer l'affichage de mon blogpost et recuperer le return de ma fonction
+//recuperation de la function et de la vue du comments et articles (blogPost)
 include 'app/persistences/blogPostData.php';
 include 'ressources/views/blogPost.tpl.php';

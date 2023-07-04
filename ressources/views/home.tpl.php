@@ -12,4 +12,6 @@
     <?php
     }endif;
     ?>
+    <br>
+    <a href="http://blog.local/index.php?action=create">Creation d'un nouvel article</a>
 </artcile>
