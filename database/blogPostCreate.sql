@@ -1,9 +1,3 @@
--- INSERT INTO articles (title, texte, name, pseudo)
---     VALUE
---     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
---     title VARCHAR(50) NOT NULL,
---     texte VARCHAR(255) NOT NULL,
---     name VARCHAR(50) NOT NULL,
---     pseudo VARCHAR(50) NOT NULL,
---
---        );
+INSERT INTO articles (title, text, start_date, end_date, degres, authors_id)
+            VALUE ( :title, :text, :start_date, :end_date, :degres, :authors_id);
+
