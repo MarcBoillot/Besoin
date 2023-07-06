@@ -1,31 +1,41 @@
 <?php
-//function blogPostDelete($pdo, $title, $text, $name, $pseudo){
-//    $request_create_articles = file_get_contents('database/blogPostDelete.sql');
-//    $statement_create_articles = $pdo->prepare($request_create_articles);
-//    $statement_create_articles->execute([
-//        'title' => $title,
-//        'text' => $text,
-//        'pseudo' => $pseudo,
-//        'name' => $name
-//    ]);
-//    return $statement_create_articles->fetch();
-//}
-//function blogPostUpdate($pdo, $title, $text, $name, $pseudo){
-//    $request_update_articles = file_get_contents('database/blogPostUpdate.sql');
-//    $statement_update_articles = $pdo->prepare($request_update_articles);
-//    $statement_update_articles->execute([
-//        'title' => $title,
-//        'text' => $text,
-//        'pseudo' => $pseudo,
-//        'name' => $name
-//    ]);
-//    return $statement_update_articles->fetch();
-//}
+function blogPostDelete($pdo, $id){
+    $request_delete_articles = file_get_contents('database/blogPostDelete.sql');
+    $statement_delete_articles = $pdo->prepare($request_delete_articles);
+    $statement_delete_articles->execute([
+        'id' => $id
+    ]);
+}
+
+function blogPostUpdate($pdo, $title, $text, $start_date, $end_date, $degres, $id)
+{
+    $request_update_articles = file_get_contents('database/blogPostUpdate.sql');
+    $statement_update_articles = $pdo->prepare($request_update_articles);
+    $statement_update_articles->execute([
+        'title' => $title,
+        'text' => $text,
+        'start_date' => $start_date,
+        'end_date' => $end_date,
+        'degres' => $degres,
+        'id' => $id
+    ]);
+    return $statement_update_articles->fetch();
+}
+function selectArticles($pdo,$id){
+//parametre le numero de larticle et elle return l'article avec l'auteur
+    $request_articles = file_get_contents('database/selectArticles.sql');
+    $statement_articles = $pdo->prepare($request_articles);
+    $statement_articles ->execute([
+        'id' => $id,
+    ]);
+    return  $statement_articles->fetchAll();
+};
 function blogPostCreate($pdo, $title, $text, $start_date, $end_date, $degres, $id){
     $request_create_articles = file_get_contents('database/blogPostCreate.sql');
     //fonction pour creer un article
     $statement_create_articles = $pdo->prepare($request_create_articles);
-    $statement_create_articles->execute(['title' => $title,
+    $statement_create_articles->execute([
+        'title' => $title,
         'text' => $text,
         'start_date' => $start_date,
         'end_date' => $end_date,

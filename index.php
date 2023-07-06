@@ -9,6 +9,8 @@ $action = filter_input(INPUT_GET,'action');
 $action = !empty($action) ? $action : 'home'; //si empty action alors action = home
 $id = filter_input(INPUT_GET,'id');
 $route =[
+    'delete' => 'app/controllers/blogPostDeleteController.php',
+    'update' => 'app/controllers/blogPostModifyController.php',
     'create' => 'app/controllers/blogPostCreateController.php',
     'blogpost' => 'app/controllers/blogPostController.php',
     'home' => 'app/controllers/homeController.php',

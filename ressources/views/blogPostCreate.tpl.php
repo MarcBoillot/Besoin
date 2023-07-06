@@ -52,7 +52,7 @@ $form_filtered = filter_input_array(INPUT_POST);
                 </div>
                 <div>
                     <select name="degres" id="pet-select">
-                        <option value="">--choisir un degre--</option>
+                        <option value="">--choisir un degres--</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -62,7 +62,6 @@ $form_filtered = filter_input_array(INPUT_POST);
                 </div>
                 <div>
                     <input type="submit" value="Ajouter un article" name="envoyer">
-                    <input type="reset" name="buton" value="Supprimer un article">
                 </div>
             </fieldset>
         </div>
