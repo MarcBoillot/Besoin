@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/database/blogPostById.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/blogPostCreate.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/blogPostDelete.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/blogPostUpdate.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/commentsByBlogPost.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/lastBlogPosts.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/researchArticles.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/researchAuthors.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/database/selectArticles.sql" dialect="GenericSQL" />
+  </component>
+</project>

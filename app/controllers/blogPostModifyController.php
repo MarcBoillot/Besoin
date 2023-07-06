@@ -10,6 +10,6 @@ $pseudo = filter_input(INPUT_POST, 'pseudo', FILTER_SANITIZE_FULL_SPECIAL_CHARS)
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 include 'app/persistences/blogPostData.php';
-$value=selectArticles($pdo ,$id,);
+$article=selectArticles($pdo ,$id);
 //blogPostUpdate($pdo, $title, $text, $start_date, $end_date, $degres, $id);
 include 'ressources/views/blogPostUpdate.tpl.php';

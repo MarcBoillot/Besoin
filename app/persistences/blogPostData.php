@@ -26,9 +26,9 @@ function selectArticles($pdo,$id){
     $request_articles = file_get_contents('database/selectArticles.sql');
     $statement_articles = $pdo->prepare($request_articles);
     $statement_articles ->execute([
-        'id' => $id,
+        'id' => $id
     ]);
-    return  $statement_articles->fetchAll();
+    return  $statement_articles->fetch();
 };
 function blogPostCreate($pdo, $title, $text, $start_date, $end_date, $degres, $id){
     $request_create_articles = file_get_contents('database/blogPostCreate.sql');
