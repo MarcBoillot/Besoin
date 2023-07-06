@@ -28,32 +28,27 @@ $form_filtered = filter_input_array(INPUT_POST);
                 <br>
                 <div>
                     <label for="text"></label>
-                    <textarea name="text" id="message" cols="60" rows="20" placeholder="Ecrivez votre article" class="fieldtextarea" value='<?= $article['text']?>'></textarea><br>
+                    <textarea name="text" id="message" cols="60" rows="20" placeholder="Ecrivez votre article" class="fieldtextarea"><?= $article['text']?></textarea><br>
                 </div>
                 <div>
                     <label for="firstname">Votre prenom</label>
-                    <input type="text" name="first_name" id="nameinput" placeholder="Marc" value='<?= $article['first_name']?>'>
+                    <input type="text" name="first_name" id="nameinput" placeholder="Marc" value="<?= $article['first_name']?>">
                 </div>
                 <div>
                     <label for="nameinput">Votre nom</label>
-                    <input type="text" name="last_name" id="nameinput" placeholder="jean" value='<?= $article['last_name']?>'>
+                    <input type="text" name="last_name" id="nameinput" placeholder="jean" value="<?= $article['last_name']?>">
                 </div>
                 <div>
                     <label for="start_date">date de debut</label>
-                    <input type="datetime-local" name="start_date" id="nameinput" placeholder="2023-07-05" value='<?= $article['start_date']?>' >
+                    <input type="datetime-local" name="start_date" id="nameinput" placeholder="2023-07-05" value="<?= $article['start_date']?>">
                 </div>
                 <div>
                     <label for="end_date">date de fin</label>
-                    <input type="datetime-local" name="end_date" id="nameinput" placeholder="2023-07-30" value='<?= $article['end_date']?>' >
+                    <input type="datetime-local" name="end_date" id="nameinput" placeholder="2023-07-30" value="<?= $article['end_date']?>">
                 </div>
                 <div>
                     <select name="degres" id="pet-select" >
-                        <option value="<?= $article['degres']?>"></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value=""><?= $article['degres']?></option>
                     </select>
                 </div>
                 <div>
