@@ -1,4 +1,4 @@
-SELECT title,pseudo,text,
+SELECT text
 DATE_FORMAT(start_date, '%d/%m/%Y')
 AS date_fr
 FROM articles

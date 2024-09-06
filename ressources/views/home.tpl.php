@@ -1,7 +1,7 @@
 <article>
     <h1>De quoi avez vous besoin ?</h1>
     <span class="form-btn">
-        <a href="http://needit.local/index.php?action=create">J'AI BESOIN DE ...'</a>
+        <a href="?action=create">J'AI BESOIN DE ...'</a>
     </span>
 
     <h1>Pouvez vous les aider ?</h1>
