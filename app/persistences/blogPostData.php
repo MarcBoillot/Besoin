@@ -42,25 +42,25 @@ function blogPostCreate($pdo, $title, $text, $start_date, $city, $id){
         'authors_id' => $id
     ]);
 }
-function lastBlogPosts($pdo){
-    $request = file_get_contents('database/lastBlogPosts.sql');
+function lastPosts($pdo){
+    $request = file_get_contents('database/lastPosts.sql');
     $statement = $pdo->query($request);
     return $statement->fetchAll();
 }
-function searchAuthor($pdo, $pseudo, $firstname, $name):int{
+function searchAuthor($pdo, $firstname):int{
 //parametre le numero de larticle et elle retourn l'article avec l'auteur
     $request_articles = file_get_contents('database/researchAuthors.sql');
     $statement_articles = $pdo->prepare($request_articles);
-    $statement_articles ->execute(['pseudo' => $pseudo]);
+    //$statement_articles ->execute(['pseudo' => $pseudo]);
     $value = $statement_articles->fetchAll();
     //condiotnd dans la fct pour verifier si l'auteur existe s'il existe j'joute pseudo etc sinon je retourne l'id
     if(empty($value)) {
         $request_articles = file_get_contents('database/createAuthors.sql');
         $statement_articles = $pdo->prepare($request_articles);
         $statement_articles ->execute([
-            'pseudo' => $pseudo,
+            //'pseudo' => $pseudo,
             'first_name' => $firstname,
-            'last_name' => $name
+           // 'last_name' => $name
         ]);
         return $pdo->lastInsertId();
     };

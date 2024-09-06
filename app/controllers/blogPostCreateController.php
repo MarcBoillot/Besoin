@@ -12,10 +12,10 @@ include 'app/persistences/blogPostData.php';
 //condition pour utiliser la fct de postdata avec le bouton envoyer
 if(!empty($_POST['envoyer'])) {
     //fonction pour verifier si un auhtor est present ou pas
-$id = searchAuthor($pdo, $pseudo, $firstname, $name);
+$id = searchAuthor($pdo, $firstname);
 //fonction pour la creation d'un article
 blogPostCreate($pdo, $title, $text, $start_date, $firstname, $city, $id);
 }
-include 'ressources/views/blogPostCreate.tpl.php';
+include 'ressources/views/iwant.tpl.php';
 
 
