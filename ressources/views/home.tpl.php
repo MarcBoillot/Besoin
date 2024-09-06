@@ -19,7 +19,7 @@
                 <h3><?= $value['text']; ?></h3>
                 <div><i>by <?= $value['date']; ?></i></div>
                 <div><i>by <?= $value['name']; ?></i></div>
-                <a href="http://needit.local/index.php?action=post&id=<?= $value['id']; ?>">J'en ai !</a>
+                <a href="?action=post&id=<?= $value['id']; ?>">J'en ai !</a>
             </div>
             <br>
     <?php

@@ -1,1 +1,1 @@
-SELECT * FROM articles WHERE articles.id = :id
+SELECT * FROM posts WHERE posts.id = :id

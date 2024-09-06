@@ -1,3 +1,3 @@
-INSERT INTO posts (title, text, start_date, firstname, city, authors_id)
-            VALUE ( :title, :text, :start_date, :firstname, :city, :authors_id);
+INSERT INTO posts (text, date, name, city, authors_id)
+            VALUE ( :text, :date, :name, :city, :authors_id);
 

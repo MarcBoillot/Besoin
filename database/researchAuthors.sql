@@ -1,1 +1,1 @@
-SELECT id FROM authors WHERE pseudo = :pseudo
+SELECT id FROM authors WHERE name = :name

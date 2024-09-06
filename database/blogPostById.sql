@@ -1,7 +1,7 @@
 SELECT text
-DATE_FORMAT(start_date, '%d/%m/%Y')
+DATE_FORMAT(date, '%d/%m/%Y')
 AS date_fr
-FROM articles
+FROM posts
 INNER JOIN authors
 ON articles.authors_id = authors.id
-WHERE articles.id = :id
+WHERE posts.id = :id

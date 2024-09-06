@@ -1,4 +1,4 @@
-SELECT articles.*, authors.first_name, authors.last_name
-FROM articles
-INNER JOIN authors ON articles.authors_id = authors.id
-WHERE articles.id = :id;
+SELECT posts.*, authors.name, authors.city
+FROM posts
+INNER JOIN authors ON posts.authors_id = authors.id
+WHERE posts.id = :id;

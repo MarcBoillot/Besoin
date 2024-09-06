@@ -1,3 +1,3 @@
 DELETE
-FROM articles
-WHERE articles.id = :id;
+FROM posts
+WHERE posts.id = :id;
