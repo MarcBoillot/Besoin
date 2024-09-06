@@ -36,12 +36,16 @@ $form_filtered = filter_input_array(INPUT_POST);
                     <input type="text" name="firstname" id="nameinput" placeholder="Marc" value=''>
                 </div>
                 <div>
-                    <label for="start_date">date de debut</label>
+                    <label for="start_date">Date de debut</label>
                     <input type="datetime-local" name="start_date" id="nameinput" placeholder="2023-07-05" value='' >
                 </div>
                 <div>
-                    <label for="nameinput">Votre pseudo</label>
-                    <input type="text" name="pseudo" id="nameinput" placeholder="twitch" value='' >
+                    <label for="nameinput">City</label>
+                    <input type="text" name="city" id="nameinput" placeholder="twitch" value='' >
+                </div>
+                <div>
+                    <label for="nameinput">Author_id</label>
+                    <input type="text" name="authors_id" id="nameinput" placeholder="twitch" value='' >
                 </div>
                 <div>
                     <input type="submit" value="Ajouter un article" name="envoyer">
