@@ -30,7 +30,7 @@ function selectArticles($pdo,$id){
     ]);
     return  $statement_articles->fetch();
 };
-function blogPostCreate($pdo, $title, $text, $start_date, $end_date, $degres, $id){
+function blogPostCreate($pdo, $title, $text, $start_date, $city, $id){
     $request_create_articles = file_get_contents('database/blogPostCreate.sql');
     //fonction pour creer un article
     $statement_create_articles = $pdo->prepare($request_create_articles);
@@ -38,8 +38,7 @@ function blogPostCreate($pdo, $title, $text, $start_date, $end_date, $degres, $i
         'title' => $title,
         'text' => $text,
         'start_date' => $start_date,
-        'end_date' => $end_date,
-        'degres' => $degres,
+        'city' => $city,
         'authors_id' => $id
     ]);
 }
