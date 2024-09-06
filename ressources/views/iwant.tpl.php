@@ -29,37 +29,19 @@ $form_filtered = filter_input_array(INPUT_POST);
                 <br>
                 <div>
                     <label for="text"></label>
-                    <textarea name="text" id="message" cols="60" rows="20" placeholder="Ecrivez votre article" class="fieldtextarea" ></textarea><br>
+                    <textarea name="text" id="message" cols="60" rows="20" placeholder="Decrivez votre besoin" class="fieldtextarea" ></textarea><br>
                 </div>
                 <div>
-                    <label for="firstname">Votre prenom</label>
+                    <label for="firstname">Votre nom</label>
                     <input type="text" name="firstname" id="nameinput" placeholder="Marc" value=''>
-                </div>
-                <div>
-                    <label for="nameinput">Votre nom</label>
-                    <input type="text" name="name" id="nameinput" placeholder="jean" value=''>
                 </div>
                 <div>
                     <label for="start_date">date de debut</label>
                     <input type="datetime-local" name="start_date" id="nameinput" placeholder="2023-07-05" value='' >
                 </div>
                 <div>
-                    <label for="end_date">date de fin</label>
-                    <input type="datetime-local" name="end_date" id="nameinput" placeholder="2023-07-30" value='' >
-                </div>
-                <div>
                     <label for="nameinput">Votre pseudo</label>
                     <input type="text" name="pseudo" id="nameinput" placeholder="twitch" value='' >
-                </div>
-                <div>
-                    <select name="degres" id="pet-select">
-                        <option value="">--choisir un degres--</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
                 </div>
                 <div>
                     <input type="submit" value="Ajouter un article" name="envoyer">
