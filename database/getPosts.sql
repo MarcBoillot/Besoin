@@ -1,6 +1,6 @@
-SELECT title, pseudo, articles.id
-FROM articles
-INNER JOIN authors
-ON articles.authors_id = authors.id
-ORDER BY articles.id DESC
+SELECT *
+FROM posts
+INNER JOIN authors ON posts.author_id = authors.id
+WHERE posts.date >= DATE_SUB(NOW(), INTERVAL 30 DAY)
+ORDER BY posts.date DESC
 LIMIT 10;

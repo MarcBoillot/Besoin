@@ -1,25 +1,32 @@
-<artcile>
-     <?php $statement = lastBlogPosts($pdo);?>
+<article>
+    <h1>De quoi avez vous besoin ?</h1>
+    <span class="form-btn">
+        <a href="http://needit.local/index.php?action=create">J'AI BESOIN DE ...'</a>
+    </span>
+
+    <h1>Pouvez vous les aider ?</h1>
+    <br>
+    <br>
+    <?php $statement = lastPosts($pdo); ?>
 
     <?php
-    if(empty($statement = lastBlogPosts($pdo))) :
-        echo 'Il y a aucuns articles';
+    if (empty($statement = lastPosts($pdo))) :
+        echo 'Own... pas de demandes pour l\'instant';
     else :
-    foreach ($statement as $value){
-        ?>
-
-            <h3><?=$value ['title'];?></h3>
-            <div><i>by <?=$value ['pseudo'];?></i></div>
-        <a href = "http://blog.local/index.php?action=blogpost&id=<?=$value ['id'];?>">Voir l'article</a><br>
-        <a href="http://blog.local/index.php?action=update&id=<?=$value ['id'];?>">modifier l'article</a>
-        <br>
-        <a href="http://blog.local/index.php?action=delete&id=<?=$value ['id'];?>" >Supprimer  l'article</a>
+        foreach ($statement as $value) {
+    ?>
+            <div class="post-card">
+                <h3><?= $value['text']; ?></h3>
+                <div><i>by <?= $value['date']; ?></i></div>
+                <div><i>by <?= $value['name']; ?></i></div>
+                <a href="http://needit.local/index.php?action=post&id=<?= $value['id']; ?>">J'en ai !</a>
+            </div>
+            <br>
     <?php
-    }endif;
+        }
+    endif;
     ?>
     <br>
     <br>
-    <a href="http://blog.local/index.php?action=create">Creation d'un nouvel article</a>
 
-
-</artcile>
+</article>
