@@ -16,6 +16,7 @@ $route =[
     'home' => 'app/controllers/homeController.php',
     'contact' => 'contact.php',
     'about' => 'about.php',
+    'comment' => "app/controllers/commentsFormController.php",
     ];
 
     if (!array_key_exists ($action, $route)){
