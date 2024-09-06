@@ -13,14 +13,15 @@ $form_filtered = filter_input_array(INPUT_POST);
 
 
 ?>
-
+<html>
+<body>
 <div class="container-contact">
     <div class="container-left">
     </div>
     <form action="?action=create" class="form" method="post">
         <div class="container-right">
             <fieldset class="fieldsetmecontacter">
-                <legend class="entete-contact">Créer un nouvel article</legend>
+                <legend class="entete-contact">Ce dont j'ai besoin</legend>
                 <div>
                     <label for="nameinput">Title</label>
                     <input type="text" name="title" id="" placeholder="Titre" value='' >
